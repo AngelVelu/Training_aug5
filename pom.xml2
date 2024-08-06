@@ -1,0 +1,14 @@
+addingdef is_palindrome(s):
+    # Remove spaces and convert to lowercase for uniformity
+    cleaned_string = ''.join(e for e in s if e.isalnum()).lower()
+    # Check if the string is equal to its reverse
+    return cleaned_string == cleaned_string[::-1]
+
+# Test the function
+test_strings = ["radar", "hello", "A man, a plan, a canal, Panama", "No lemon, no melon", "python"]
+
+for test_string in test_strings:
+    if is_palindrome(test_string):
+        print(f'"{test_string}" is a palindrome.')
+    else:
+        print(f'"{test_string}" is not a palindrome.')
